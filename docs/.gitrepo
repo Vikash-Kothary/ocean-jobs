@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/vikash-kothary/ocean-jobs.wiki.git
+	branch = master
+	commit = fa540406d41f84e78c865dce2c538228bb3e6183
+	parent = 6d7c12c1e509fd83036342eada7d4f1fadc21d5b
+	method = merge
+	cmdver = 0.4.0
