@@ -6,6 +6,8 @@
 
 BACKEND_CONTEXT := backend
 -include ${BACKEND_CONTEXT}/Makefile
+EXAMPLES_CONTEXT := examples
+-include ${EXAMPLES_CONTEXT}/Makefile
 
 #@ - help: Show all commands.
 help:
