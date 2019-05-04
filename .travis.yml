@@ -5,4 +5,4 @@ python:
 install:
   - pip install -r backend/requirements.txt
 script:
-  - python3 -m pytest
+  - python -m pytest
