@@ -1,2 +1,3 @@
-def testTruth():
+
+def testTrue():
     assert True == True
