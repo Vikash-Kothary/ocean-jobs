@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h1>Ocean Jobs Visualisations</h1>
+<p>A place tp export your data visualisations and host as a web service. Currently just a basic progress tracker</p>
+
+<table style="width:100%">
+  <tr>
+    <th>Step</th>
+    <th>Status</th>
+  </tr>
+  <tr>
+    <td>Upload CV</td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td>Upload Cover Letter</td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td>Select Jobs</td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td>Select Companies</td>
+    <td>False</td>
+  </tr>
+{% endblock %}
+
+{% block css %}
+<style>
+
+h1, h2, h3, h4, h5, h6, p {
+	text-align: center;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+</style>
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+</script>
+{% endblock %}
