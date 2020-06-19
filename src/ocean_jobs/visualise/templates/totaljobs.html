@@ -4,29 +4,7 @@
 <h1>Ocean Jobs Visualisations</h1>
 <p>A place tp export your data visualisations and host as a web service. Currently just a basic progress tracker</p>
 
-<p>Pages: <a href="/totaljobs">TotalJobs</a></p>
-
-<table style="width:100%">
-  <tr>
-    <th>Step</th>
-    <th>Status</th>
-  </tr>
-  <tr>
-    <td>Upload CV</td>
-    <td>False</td>
-  </tr>
-  <tr>
-    <td>Upload Cover Letter</td>
-    <td>False</td>
-  </tr>
-  <tr>
-    <td>Select Jobs</td>
-    <td>False</td>
-  </tr>
-  <tr>
-    <td>Select Companies</td>
-    <td>False</td>
-  </tr>
+{% include 'html/totaljobs.html' %}
 {% endblock %}
 
 {% block css %}
@@ -36,9 +14,24 @@ h1, h2, h3, h4, h5, h6, p {
 	text-align: center;
 }
 
+/* Update table border */
 table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
+}
+
+/* Center align table labels */
+table > thead > tr {
+  text-align: center !important;
+}
+
+/* Hide row numbers */
+tr > th:nth-of-type(1) {
+  display: none;
+}
+
+tr > td:nth-of-type(1) {
+  max-width: 200px;
 }
 
 </style>
