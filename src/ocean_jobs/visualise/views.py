@@ -9,3 +9,7 @@ views = Blueprint('views', __name__, static_folder='static',
 @views.route('/')
 def index():
     return render_template('index.html')
+
+@views.route('/totaljobs')
+def totaljobs():
+    return render_template('totaljobs.html')
