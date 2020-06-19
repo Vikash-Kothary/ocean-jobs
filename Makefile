@@ -35,6 +35,7 @@ run:
 
 clean:
 	@[[ -z "${FORCE}" ]] || rm -r .venv
+	@find . -name __pycache__ -type d -not -path .venv -print0 | xargs -0 rm -r
 	@find . -name *.pytest_cache -type d -not -path .venv -print0 | xargs -0 rm -r
 	@find . -name *.egg-info -type d -not -path .venv -print0 | xargs -0 rm -r
 
