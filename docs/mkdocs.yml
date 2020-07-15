@@ -1,0 +1,9 @@
+strict: true
+theme: readthedocs
+site_name: OCEAN Jobs
+site_description: 
+site_author: Vikash Kothary
+site_url: https://vikash-kothary.github.io/ocean-jobs
+repo_url: https://github.com/vikash-kothary/ocean-jobs
+docs_dir: src
+site_dir: build
