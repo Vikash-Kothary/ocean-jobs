@@ -14,25 +14,21 @@ export
 help:
 	@awk 'BEGIN {FS = " ?#?: "; print ""$(OCEAN_JOBS_NAME)" "$(OCEAN_JOBS_VERSION)"\n"$(OCEAN_JOBS_DESCRIPTION)"\n\nUsage: make \033[36m<command>\033[0m\n\nCommands:"} /^.PHONY: ?[a-zA-Z_-]/ { printf "  \033[36m%-10s\033[0m %s\n", $$2, $$3 }' $(MAKEFILE_LIST)
 
-.PHONY: init #: Download dependencies.
-init:
-	@poetry install
-
 .PHONY: lint
 lint:
-	@flake8 src tests
+	@$(FLAKE8) src tests
 
 .PHONY: notebooks #: Develop using Jupyter Lab.
 notebooks:
-	@jupyter lab
+	@$(JUPYTER) lab
 
 .PHONY: tests
 tests:
-	@pytest tests
+	@$(PYTEST) tests
 
 .PHONY: run
 run:
-	@flask run
+	@$(FLASK) run
 
 clean:
 	@[[ -z "${FORCE}" ]] || rm -r .venv
