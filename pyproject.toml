@@ -7,12 +7,11 @@ authors = ["Vikash Kothary <kothary.vikash@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.7"
 Flask = "^1.1.2"
-python-dotenv = "^0.13.0"
-
 
 [tool.poetry.dev-dependencies]
-jupyter = "^1.0.0"
+python-dotenv = "^0.13.0"
 flake8 = "^3.8.3"
+jupyter = "^1.0.0"
 jupyterlab = "^2.1.4"
 nbstripout = "^0.3.8"
 scrapy = "^2.1.0"
