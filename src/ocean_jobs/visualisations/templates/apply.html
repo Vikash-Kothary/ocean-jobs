@@ -7,36 +7,30 @@
 
 {% include '_nav.html' %}
 
-<table style="width:100%">
+<button class='table__save' type="button">Save</button>
+<table class="table" style="width:100%">
   <tr class="table_row">
-    <th>Step</th>
-    <th>Status</th>
+    <th>Register Interested</th>
+    <th>URL</th>
+    <th>Company-Recruiter</th>
+    <th>Description</th>
+    <th>Salary</th>
+    <th>Job_Type</th>
   </tr>
-  <tr>
-    <td>Upload CV</td>
-    <td>False</td>
-  </tr>
-  <tr>
-    <td>Upload Cover Letter</td>
-    <td>False</td>
-  </tr>
-  <tr>
-    <td>Select Jobs</td>
-    <td>False</td>
-  </tr>
-  <tr>
-    <td>Select Companies</td>
-    <td>False</td>
-  </tr>
+  
+</table>
 {% endblock %}
 
 {% block css %}
 <style>
 
+body {
+  overflow: initial;
+}
+
 .table {
   width: 100%;
   padding: 0 10px;
-  overflow: hidden;
 }
 
 .table__row {
@@ -47,20 +41,20 @@
   width: 100%;
 }
 
-.form__label {
+.table__label {
 }
 
-.form__input {
+.table__input {
   border: 2px solid black;
   float: right;
   max-width: 66%;
   width: 100%;
 }
 
-.form__submit {
+.table__save {
   width: 100%;
   padding: 10px 0;
-  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 </style>
@@ -68,5 +62,34 @@
 
 {% block js %}
 <script type="text/javascript">
+
+fetch('{{ url_for('data.searchresults') }}')
+.then((resp) => resp.json())
+.then(function(data){
+  const table = document.getElementsByClassName("table")[0];
+  for (let x in data) {
+    let row = `<tr>
+        <td><select name="interest" id="interest">
+        <option value="None">--</option>
+        <option value="Apply">Apply</option>
+        <option value="Reject">Reject</option>
+        </select></td>
+        <td>${data[x]['URL']}</td>
+        <td>${data[x]['Company-Recruiter']}</td>
+        <td>${data[x]['Description']}</td>
+        <td>${data[x]['Salary']}</td>
+        <td>${data[x]['Job_Type']}</td>
+      </tr>`
+    table.insertAdjacentHTML('beforeend', row)
+  }
+})
+.catch(function(error){
+  alert(error);
+})
+
+const save = document.getElementsByClassName('table__save')[0];
+save.onclick = function() {
+  alert('Send POST request');
+}
 </script>
 {% endblock %}
