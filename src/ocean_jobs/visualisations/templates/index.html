@@ -1,10 +1,11 @@
-{% extends "layout.html" %}
+{% extends "_layout.html" %}
 
 {% block body %}
 <h1>Ocean Jobs Visualisations</h1>
-<p>A place tp export your data visualisations and host as a web service. Currently just a basic progress tracker</p>
+<p>A place to export your data visualisations and host as a web service. Currently just a basic progress tracker/</p>
 
-<p>Pages: <a href="/totaljobs">TotalJobs</a></p>
+{% include '_nav.html' %}
+
 
 <table style="width:100%">
   <tr>

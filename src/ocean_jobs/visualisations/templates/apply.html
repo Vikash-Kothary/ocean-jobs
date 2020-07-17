@@ -1,0 +1,72 @@
+{% extends "_layout.html" %}
+
+{% block body %}
+<h1 class="title">Apply</h1>
+<h3 class="subtitle">Ocean Jobs Visualisations</h3>
+<p class="description">A place to export your data visualisations and host as a web service. Currently just a basic progress tracker</p>
+
+{% include '_nav.html' %}
+
+<table style="width:100%">
+  <tr class="table_row">
+    <th>Step</th>
+    <th>Status</th>
+  </tr>
+  <tr>
+    <td>Upload CV</td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td>Upload Cover Letter</td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td>Select Jobs</td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td>Select Companies</td>
+    <td>False</td>
+  </tr>
+{% endblock %}
+
+{% block css %}
+<style>
+
+.table {
+  width: 100%;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+.table__row {
+  border: 2px solid black;
+  display: inline-block;
+  margin: 5px 0;
+  padding: 5px;
+  width: 100%;
+}
+
+.form__label {
+}
+
+.form__input {
+  border: 2px solid black;
+  float: right;
+  max-width: 66%;
+  width: 100%;
+}
+
+.form__submit {
+  width: 100%;
+  padding: 10px 0;
+  margin-top: 10px;
+}
+
+</style>
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+</script>
+{% endblock %}

@@ -4,7 +4,7 @@ from flask import Flask
 from ocean_jobs import data
 from ocean_jobs import features
 from ocean_jobs import modelling
-from ocean_jobs import visualise
+from ocean_jobs import visualisations
 from ocean_jobs import utils
 
 def create_app():
@@ -12,7 +12,7 @@ def create_app():
     data.register_app(app)
     features.register_app(app)
     modelling.register_app(app)
-    visualise.register_app(app)
+    visualisations.register_app(app)
     utils.register_app(app)
     return app
 
