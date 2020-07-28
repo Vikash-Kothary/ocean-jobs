@@ -3,7 +3,7 @@
 SHELL := "$(shell which bash)"
 OCEAN_JOBS_NAME ?= "OCEAN Jobs"
 OCEAN_JOBS_VERSION ?= "v0.1.0"
-OCEAN_JOBS_DESCRIPTION ?= "There's plenty of jobs in the ocean."
+OCEAN_JOBS_DESCRIPTION ?= "There are plenty of jobs in the ocean."
 ENV ?= local
 
 include config/.env.${ENV}
