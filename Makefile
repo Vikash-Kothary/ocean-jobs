@@ -6,7 +6,7 @@ OCEAN_JOBS_VERSION ?= "v0.1.0"
 OCEAN_JOBS_DESCRIPTION ?= "There are plenty of jobs in the ocean."
 ENV ?= local
 
-include config/.env.${ENV}
+-include config/.env.${ENV}
 export
 
 .DEFAULT_GOAL := help
