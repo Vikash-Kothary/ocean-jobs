@@ -1,5 +1,8 @@
 config/*
 !config/.env.example
+data/*
+data/*/*
+!data/*/.gitkeep
 
 # Created by https://www.toptal.com/developers/gitignore/api/windows,linux,macos,python,jupyternotebooks,pycharm+all
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,linux,macos,python,jupyternotebooks,pycharm+all
