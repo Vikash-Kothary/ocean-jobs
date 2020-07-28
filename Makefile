@@ -16,7 +16,7 @@ help:
 
 .PHONY: docs
 docs: print-env
-	@$(MKDOCS) serve -f docs/mkdocs.yml
+	@$(MKDOCS) $(MKDOCS_OPTION) -f docs/mkdocs.yml
 
 .PHONY: lint
 lint: print-env
@@ -24,7 +24,7 @@ lint: print-env
 
 .PHONY: notebooks #: Develop using Jupyter Lab.
 notebooks: print-env
-	@$(JUPYTER) lab
+	@$(JUPYTER) $(JUPYTER_OPTION)
 
 .PHONY: tests
 tests: print-env
