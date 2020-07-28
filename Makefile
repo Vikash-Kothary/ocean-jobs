@@ -34,6 +34,7 @@ tests: print-env
 run: print-env
 	@$(FLASK) run
 
+.PHONY: clean #: Remove build files.
 clean: print-env
 	@[[ -z "${FORCE}" ]] || rm -r .venv
 	@find . -name __pycache__ -type d -not -path .venv -print0 | xargs -0 rm -r
