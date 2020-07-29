@@ -26,6 +26,7 @@ boto3 = "^1.14.28"
 black = "^19.10b0"
 isort = "^5.2.1"
 pre-commit = "^2.6.0"
+shellcheck-py = "^0.7.1"
 
 [tool.black]
 line-length = 100

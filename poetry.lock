@@ -1091,7 +1091,7 @@ six = "*"
 [[package]]
 category = "dev"
 description = "Run a subprocess in a pseudo terminal"
-marker = "sys_platform != \"win32\" or os_name != \"nt\" or python_version >= \"3.3\" and sys_platform != \"win32\""
+marker = "python_version >= \"3.3\" and sys_platform != \"win32\" or sys_platform != \"win32\" or os_name != \"nt\" or python_version >= \"3.3\" and sys_platform != \"win32\" and (python_version >= \"3.3\" and sys_platform != \"win32\" or sys_platform != \"win32\")"
 name = "ptyprocess"
 optional = false
 python-versions = "*"
@@ -1435,6 +1435,14 @@ tests = ["coverage (>=4.2.0)", "pytest"]
 
 [[package]]
 category = "dev"
+description = "Python wrapper around invoking shellcheck (https://www.shellcheck.net/)"
+name = "shellcheck-py"
+optional = false
+python-versions = ">=3.5"
+version = "0.7.1.1"
+
+[[package]]
+category = "dev"
 description = "Python 2 and 3 compatibility utilities"
 name = "six"
 optional = false
@@ -1650,7 +1658,6 @@ version = "1.12.1"
 [[package]]
 category = "dev"
 description = "Backport of pathlib-compatible object wrapper for zip files"
-marker = "python_version < \"3.8\""
 name = "zipp"
 optional = false
 python-versions = ">=3.6"
@@ -1677,7 +1684,7 @@ test = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 
 [metadata]
-content-hash = "83b184dd5bb321fbab26e30cc104e124b0f9453ee09a39282cec20ac5671b79c"
+content-hash = "056b995d500e2569ec97ae78c68634de4e7a8eec95fcd0258bb4a29ce90b4ed3"
 python-versions = "^3.7"
 
 [metadata.files]
@@ -2360,6 +2367,12 @@ send2trash = [
 service-identity = [
     {file = "service_identity-18.1.0-py2.py3-none-any.whl", hash = "sha256:001c0707759cb3de7e49c078a7c0c9cd12594161d3bf06b9c254fdcb1a60dc36"},
     {file = "service_identity-18.1.0.tar.gz", hash = "sha256:0858a54aabc5b459d1aafa8a518ed2081a285087f349fe3e55197989232e2e2d"},
+]
+shellcheck-py = [
+    {file = "shellcheck_py-0.7.1.1-py2.py3-none-macosx_10_14_x86_64.whl", hash = "sha256:9f537613212aad5221a020dde3b86884cf4778688788ac26ddeb21fecf3ec2e0"},
+    {file = "shellcheck_py-0.7.1.1-py2.py3-none-manylinux1_x86_64.whl", hash = "sha256:0fca77ece2ba232ca2fdbe4f15dc4b0a30f3e38e896345b2dbf4dbe20e4bb8a9"},
+    {file = "shellcheck_py-0.7.1.1-py2.py3-none-win_amd64.whl", hash = "sha256:59c623567a1a7bd0a919b5009790b199b5457a78053b775de1886f01693533af"},
+    {file = "shellcheck_py-0.7.1.1.tar.gz", hash = "sha256:044fb62e44d549c49a712c6ac0a60d6f4ae2d1afebbc167d65ec62dc689b8f2b"},
 ]
 six = [
     {file = "six-1.15.0-py2.py3-none-any.whl", hash = "sha256:8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"},
