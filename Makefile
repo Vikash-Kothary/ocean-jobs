@@ -42,4 +42,5 @@ clean: print-env
 	@find . -name *.egg-info -type d -not -path .venv -print0 | xargs -0 rm -r
 
 %:
+	@test -f scripts/$(*).sh
 	@sh scripts/$(*).sh
