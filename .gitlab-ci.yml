@@ -1,0 +1,72 @@
+image: lambci/lambda:build-python3.7
+
+variables:
+  ENV: ci
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+cache:
+  paths:
+    - .cache/pip
+    - .venv/
+
+before_script:
+  # Print out python version for debugging
+  - python -V
+  - make init
+
+stages:
+  - lint
+  - tests
+  - build
+  - release
+  - package
+  - deploy
+  - docs
+
+lint:
+  stage: lint
+  script:
+    - make lint
+
+tests:
+  stage: tests
+  script:
+    - make tests
+
+build:
+  stage: build
+  script:
+    - make build
+  only:
+    - master
+
+release:
+  stage: release
+  script:
+    - make release
+  only:
+    - master
+
+package:
+  stage: package
+  script:
+    - make package
+  only:
+    - master
+
+deploy:
+  stage: deploy
+  script:
+    - make deploy
+  only:
+    - master
+
+docs:
+  stage: docs
+  script:
+    - make docs
+  artifacts:
+    paths:
+      - docs/build
+  only:
+    - master
