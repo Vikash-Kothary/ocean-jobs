@@ -25,3 +25,7 @@ repos:
     rev: v1.0.1
     hooks:
     -   id: gitlab-ci-linter
+-   repo: git://github.com/igorshubovych/markdownlint-cli
+    sha: v0.5.0
+    hooks:
+    -   id: markdownlint
