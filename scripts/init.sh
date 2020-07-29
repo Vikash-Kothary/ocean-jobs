@@ -1,3 +1,7 @@
+#!/bin/bash
+# file: init.sh
+# description: Download dependencies based on environment.
+
 if [[ "${ENV}" == "ci" ]]; then
 	pip install -r src/requirements-dev.txt
 elif [[ "${ENV}" == "local" ]]; then
