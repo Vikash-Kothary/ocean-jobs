@@ -20,7 +20,7 @@ docs: print-env
 
 .PHONY: lint
 lint: print-env
-	@$(FLAKE8) src tests
+	@$(PRE_COMMIT) run --all-files
 
 .PHONY: notebooks #: Develop using Jupyter Lab.
 notebooks: print-env
