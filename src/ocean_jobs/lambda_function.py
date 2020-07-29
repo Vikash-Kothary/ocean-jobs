@@ -12,8 +12,8 @@ patch_all()
 
 
 def lambda_handler(event, context):
-    logger.info('## ENVIRONMENT VARIABLES\r' + jsonpickle.encode(dict(**os.environ)))
-    logger.info('## EVENT\r' + jsonpickle.encode(event))
-    logger.info('## CONTEXT\r' + jsonpickle.encode(context))
-    
+    logger.info("## ENVIRONMENT VARIABLES\r" + jsonpickle.encode(dict(**os.environ)))
+    logger.info("## EVENT\r" + jsonpickle.encode(event))
+    logger.info("## CONTEXT\r" + jsonpickle.encode(context))
+
     return get_mock_data()

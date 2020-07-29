@@ -6,6 +6,7 @@ from ocean_jobs import models
 from ocean_jobs import visualisations
 from ocean_jobs import utils
 
+
 def create_app():
     app = Flask(__name__)
     data.register_app(app)
@@ -15,5 +16,6 @@ def create_app():
     utils.register_app(app)
     return app
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     create_app()
