@@ -1,2 +1,2 @@
 def testTrue():
-    assert True == True
+    assert True

@@ -11,7 +11,7 @@ def search():
     search["company"] = request.form.get("company", "")
     search["keywords"] = request.form.get("keywords", "").split(";")
     search["keywords"] = [keyword.strip() for keyword in search["keywords"] if keyword != ""]
-    search["schedule"] = request.form.get("schedule", False) == True
+    search["schedule"] = request.form.get("schedule", False)
 
     # TODO:
     return redirect(url_for("views.apply"))
