@@ -1,5 +1,7 @@
 import os
+
 from scrapy.crawler import CrawlerProcess
+
 from ocean_jobs.data.spiders.totaljobs import JobSpider
 
 

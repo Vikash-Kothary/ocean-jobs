@@ -1,5 +1,5 @@
 import pandas as pd
-from flask import Blueprint, request, redirect, url_for
+from flask import Blueprint, redirect, request, url_for
 
 data = Blueprint("data", __name__)
 

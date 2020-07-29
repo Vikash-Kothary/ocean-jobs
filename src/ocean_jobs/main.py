@@ -1,10 +1,6 @@
 from flask import Flask
 
-from ocean_jobs import data
-from ocean_jobs import features
-from ocean_jobs import models
-from ocean_jobs import visualisations
-from ocean_jobs import utils
+from ocean_jobs import data, features, models, utils, visualisations
 
 
 def create_app():

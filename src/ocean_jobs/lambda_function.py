@@ -1,12 +1,10 @@
 import os
 
 import jsonpickle
-
 from aws_xray_sdk.core import patch_all
 
 from ocean_jobs.utils.logger import logger
 from ocean_jobs.utils.mock import get_mock_data
-
 
 patch_all()
 

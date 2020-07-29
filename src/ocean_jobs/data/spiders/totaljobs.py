@@ -1,6 +1,7 @@
+import html
+
 import scrapy
 from bs4 import BeautifulSoup
-import html
 
 
 class JobSpider(scrapy.Spider):
