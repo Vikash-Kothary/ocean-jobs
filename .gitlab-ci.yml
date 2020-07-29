@@ -12,7 +12,7 @@ cache:
 before_script:
   # Print out python version for debugging
   - python -V
-  - pip install -r src/requirements-dev.txt
+  - make init
 
 stages:
   - lint
