@@ -3,6 +3,7 @@
 # description: Download dependencies based on environment.
 
 if [[ "${ENV}" == "ci" ]]; then
+	pip install toml # Need to be preinstalled to use package setup.py.
 	pip install -r src/requirements-dev.txt
 elif [[ "${ENV}" == "local" ]]; then
 	make lock
