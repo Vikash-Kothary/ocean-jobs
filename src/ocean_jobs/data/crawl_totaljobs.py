@@ -1,7 +1,5 @@
-
-from scrapy.crawler import CrawlerProcess
-
 from ocean_jobs.data.spiders.totaljobs import JobSpider
+from scrapy.crawler import CrawlerProcess
 
 
 def run_crawler(output_file):

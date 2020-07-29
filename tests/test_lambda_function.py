@@ -1,6 +1,5 @@
 import jsonpickle
 from aws_xray_sdk.core import xray_recorder
-
 from ocean_jobs.lambda_function import lambda_handler as handler
 
 

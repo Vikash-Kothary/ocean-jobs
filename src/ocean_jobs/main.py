@@ -1,5 +1,4 @@
 from flask import Flask
-
 from ocean_jobs import data, features, models, utils, visualisations
 
 

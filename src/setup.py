@@ -1,10 +1,11 @@
 import os
 
+import toml
+
 try:
     from setuptools import setup
 except ImportError:
     from distutils.core import setup
-import toml
 
 if os.path.isfile("./pyproject.toml"):
     project = toml.load("./pyproject.toml")
