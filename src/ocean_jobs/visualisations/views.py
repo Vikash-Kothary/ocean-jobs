@@ -1,23 +1,25 @@
+from flask import Blueprint, render_template
 
-from flask import Blueprint
-from flask import render_template
+views = Blueprint(
+    "views", __name__, static_folder="static", static_url_path="", template_folder="templates",
+)
 
-views = Blueprint('views', __name__, static_folder='static', 
-	static_url_path='', 
-	template_folder='templates')
 
-@views.route('/')
+@views.route("/")
 def index():
-    return render_template('index.html')
+    return render_template("index.html")
 
-@views.route('/search')
+
+@views.route("/search")
 def search():
-    return render_template('search.html')
+    return render_template("search.html")
 
-@views.route('/apply')
+
+@views.route("/apply")
 def apply():
-    return render_template('apply.html')
+    return render_template("apply.html")
 
-@views.route('/totaljobs')
+
+@views.route("/totaljobs")
 def totaljobs():
-    return render_template('totaljobs.html')
+    return render_template("totaljobs.html")

@@ -1,3 +1,4 @@
+appdirs==1.4.4
 appnope==0.1.0; sys_platform == "darwin" or platform_system == "Darwin" or python_version >= "3.3" and sys_platform == "darwin"
 atomicwrites==1.4.0; sys_platform == "win32"
 attrs==19.3.0
@@ -5,11 +6,13 @@ automat==20.2.0
 aws-xray-sdk==2.6.0
 backcall==0.2.0
 beautifulsoup4==4.9.1
+black==19.10b0
 bleach==3.1.5
-boto3==1.14.28
-botocore==1.17.28
+boto3==1.14.31
+botocore==1.17.31
 certifi==2020.6.20
 cffi==1.14.1
+cfgv==3.1.0
 chardet==3.0.4
 click==7.1.2
 colorama==0.4.3; python_version >= "3.3" and sys_platform == "win32" or sys_platform == "win32"
@@ -18,12 +21,15 @@ cryptography==3.0
 cssselect==1.1.0
 decorator==4.4.2
 defusedxml==0.6.0
+distlib==0.3.1
 docutils==0.15.2
 entrypoints==0.3
+filelock==3.0.12
 flake8==3.8.3
 flask==1.1.2
 future==0.18.2
 hyperlink==19.0.0
+identify==1.4.25
 idna==2.10
 importlib-metadata==1.7.0
 incremental==17.5.0
@@ -31,6 +37,7 @@ ipykernel==5.3.4
 ipython==7.16.1
 ipython-genutils==0.2.0
 ipywidgets==7.5.1
+isort==5.2.1
 itemadapter==0.1.0
 itsdangerous==1.1.0
 jedi==0.17.2
@@ -44,7 +51,7 @@ jupyter==1.0.0
 jupyter-client==6.1.6
 jupyter-console==6.1.0
 jupyter-core==4.6.3
-jupyterlab==2.2.0
+jupyterlab==2.2.2
 jupyterlab-server==1.2.0
 livereload==2.6.2
 lunr==0.5.8
@@ -59,16 +66,19 @@ nbconvert==5.6.1
 nbformat==5.0.7
 nbstripout==0.3.9
 nltk==3.5; python_version > "2.7"
+nodeenv==1.4.0
 notebook==6.0.3
 numpy==1.19.1
 packaging==20.4
-pandas==1.0.5
+pandas==1.1.0
 pandocfilters==1.4.2
 parsel==1.6.0
 parso==0.7.1
+pathspec==0.8.0
 pexpect==4.8.0; python_version >= "3.3" and sys_platform != "win32" or sys_platform != "win32"
 pickleshare==0.7.5
 pluggy==0.13.1
+pre-commit==2.6.0
 prometheus-client==0.8.0
 prompt-toolkit==3.0.5
 protego==0.1.16
@@ -97,7 +107,7 @@ pyzmq==19.0.1
 qtconsole==4.7.5
 qtpy==1.9.0
 queuelib==1.5.0
-regex==2020.7.14; python_version > "2.7"
+regex==2020.7.14
 requests==2.24.0
 s3transfer==0.3.3
 scrapy==2.2.1
@@ -112,12 +122,15 @@ tornado==6.0.4
 tqdm==4.48.0; python_version > "2.7"
 traitlets==4.3.3
 twisted==20.3.0
+typed-ast==1.4.1
 urllib3==1.25.10
+virtualenv==20.0.28
 w3lib==1.22.0
 wcwidth==0.2.5
 webencodings==0.5.1
 werkzeug==1.0.1
 widgetsnbextension==3.5.1
 wrapt==1.12.1
-zipp==3.1.0
+zipp==3.1.0; python_version < "3.8"
 zope.interface==5.1.0
+-e src/.

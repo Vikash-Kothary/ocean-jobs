@@ -1,0 +1,35 @@
+repos:
+-   repo: https://github.com/asottile/seed-isort-config
+    rev: v1.9.3
+    hooks:
+    - id: seed-isort-config
+-   repo: https://github.com/pre-commit/mirrors-isort
+    rev: v4.3.21
+    hooks:
+    - id: isort
+-   repo: https://github.com/ambv/black
+    rev: stable
+    hooks:
+    - id: black
+      language_version: python3.7
+-   repo: https://gitlab.com/pycqa/flake8
+    rev: 3.7.9
+    hooks:
+    - id: flake8
+-   repo: https://github.com/shellcheck-py/shellcheck-py
+    rev: v0.7.1.1
+    hooks:
+    -   id: shellcheck
+        files: ".sh"
+-   repo: https://gitlab.com/devopshq/gitlab-ci-linter
+    rev: v1.0.1
+    hooks:
+    -   id: gitlab-ci-linter
+-   repo: git://github.com/igorshubovych/markdownlint-cli
+    rev: v0.5.0
+    hooks:
+    -   id: markdownlint
+- repo: https://gitlab.com/iamlikeme/nbhooks
+  rev: 1.0.0  # Set to the most recent version
+  hooks:
+  - id: nb-ensure-clean
