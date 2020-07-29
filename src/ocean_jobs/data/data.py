@@ -10,9 +10,7 @@ def search():
     search["role"] = request.form.get("role")
     search["company"] = request.form.get("company", "")
     search["keywords"] = request.form.get("keywords", "").split(";")
-    search["keywords"] = [
-        keyword.strip() for keyword in search["keywords"] if keyword != ""
-    ]
+    search["keywords"] = [keyword.strip() for keyword in search["keywords"] if keyword != ""]
     search["schedule"] = request.form.get("schedule", False) == True
 
     # TODO:

@@ -18,9 +18,7 @@ class JobSpider(scrapy.Spider):
             yield scrapy.Request(url=url, callback=self.parse1)
 
     def parse1(self, response):
-        page_num = response.css(
-            ".results-footer-links-container nav span.active::text"
-        ).get()
+        page_num = response.css(".results-footer-links-container nav span.active::text").get()
         next_page = (
             response.url.split("?")[0]
             + response.css(
@@ -32,28 +30,22 @@ class JobSpider(scrapy.Spider):
 
             for job in response.css("div.job-title"):
                 yield scrapy.Request(
-                    url=str(job.css("a::attr(href)").get()), callback=self.parse2
+                    url=str(job.css("a::attr(href)").get()), callback=self.parse2,
                 )
 
             yield scrapy.Request(url=next_page, callback=self.parse1)
 
     def parse2(self, response):
 
-        company = response.css(
-            "section.job-summary li[class='company icon'] div a::text"
-        ).get()
+        company = response.css("section.job-summary li[class='company icon'] div a::text").get()
 
         description = BeautifulSoup(
-            "".join(response.css("div.job-description p").getall()), "html.parser"
+            "".join(response.css("div.job-description p").getall()), "html.parser",
         )
 
-        salary_details = response.css(
-            "section.job-summary li[class='salary icon'] div::text"
-        ).get()
+        salary_details = response.css("section.job-summary li[class='salary icon'] div::text").get()
 
-        job_type = response.css(
-            "section.job-summary li[class='job-type icon'] div::text"
-        ).get()
+        job_type = response.css("section.job-summary li[class='job-type icon'] div::text").get()
 
         yield {
             "URL": response.url,
