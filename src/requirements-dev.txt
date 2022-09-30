@@ -43,7 +43,7 @@ itsdangerous==1.1.0
 jedi==0.17.2
 jinja2==2.11.2
 jmespath==0.10.0
-joblib==0.16.0; python_version > "2.7"
+joblib==1.2.0; python_version > "2.7"
 json5==0.9.5
 jsonpickle==1.4.1
 jsonschema==3.2.0
